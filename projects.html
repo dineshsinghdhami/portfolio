@@ -27,7 +27,7 @@ color:#1e1e2a;
 padding:2rem 1rem;
 }
 
-/* HEADER */
+ 
 
 .top-bar{
 background:#2b2b3a;
@@ -81,7 +81,7 @@ gap:7px;
 color:#dbba95;
 }
 
-/* BACK BUTTON */
+ 
 
 .back-btn{
 display:inline-block;
@@ -99,21 +99,67 @@ transition:0.2s;
 background:#b58b6b;
 }
 
-/* MAIN GRID */
-
+ 
 .main-grid{
 display:grid;
 grid-template-columns:1fr 280px;
 }
 
 @media(max-width:750px){
+
+   
+
+.contact-badge{
+flex-wrap:wrap;
+justify-content:center;
+gap:8px;
+padding:0.4rem 0.8rem;
+margin-top:10px;
+}
+
+.contact-badge a{
+font-size:0.85rem;
+}
+ 
+
 .main-grid{
-grid-template-columns:1fr;
-}
+display:flex;
+flex-direction:column;
 }
 
-/* CONTENT */
+ 
 
+.sidebar{
+order:1;
+border-left:none;
+border-bottom:1px solid #ddcfc0;
+}
+
+ 
+
+.content{
+order:2;
+}
+
+ 
+
+.social-bar{
+order:3;
+margin-top:30px;
+}
+
+ 
+
+.sidebar{
+text-align:center;
+}
+
+.profile-pic-placeholder{
+margin:auto;
+}
+
+}
+ 
 .content{
 padding:2rem;
 }
@@ -128,8 +174,7 @@ gap:8px;
 border-bottom:2px dashed #cdb7a0;
 padding-bottom:0.4rem;
 }
-
-/* PROJECT GRID */
+ 
 
 .projects-grid{
 display:grid;
@@ -197,8 +242,7 @@ padding:3px 10px;
 font-size:0.75rem;
 border-radius:20px;
 }
-
-/* SIDEBAR */
+ 
 
 .sidebar{
 background:#f4efe7;
@@ -264,13 +308,57 @@ background:#b58b6b;
 color:white;
 }
 
+ 
+
+.mobile-social{
+display:none;
+}
+ 
+
+@media(max-width:750px){
+
+.main-grid{
+display:flex;
+flex-direction:column;
+}
+
+.sidebar{
+order:1;
+border-left:none;
+border-bottom:1px solid #ddcfc0;
+text-align:center;
+}
+
+.content{
+order:2;
+}
+ 
+
+.sidebar .social-bar{
+display:none;
+}
+ 
+.mobile-social{
+display:block;
+margin-top:80px;    
+padding-top:25px;
+padding-bottom:30px;
+border-top:1px solid #ddcfc0;
+}
+
+.mobile-social .social-bar{
+display:flex;
+justify-content:center;
+gap:12px;
+}
+
+}
+
 </style>
 </head>
 
 <body>
-
-<!-- HEADER -->
-
+ 
 <div class="top-bar">
 
 <div class="identity">
@@ -296,13 +384,9 @@ color:white;
 
 </div>
 
-<!-- BACK BUTTON -->
-
 <a href="https://www.dineshsinghdhami.com.np/" class="back-btn">
 <i class="fas fa-arrow-left"></i> Back to Portfolio
 </a>
-
-<!-- GRID -->
 
 <div class="main-grid">
 
@@ -438,7 +522,7 @@ Users can browse products, view product, add to cart, and place orders.
 
 </div>
 
-<!-- SIDEBAR -->
+<!-- RIGHT SIDEBAR -->
 
 <div class="sidebar">
 
@@ -531,6 +615,28 @@ window.open(
 }
 
 </script>
+<div class="mobile-social">
 
+<div class="social-bar">
+
+<a href="https://github.com/dineshsinghdhami" target="_blank">
+<i class="fab fa-github"></i>
+</a>
+
+<a href="https://linkedin.com/in/dineshsinghdhami1" target="_blank">
+<i class="fab fa-linkedin"></i>
+</a>
+
+<a href="https://x.com/dineshdhami001" target="_blank">
+<i class="fab fa-twitter"></i>
+</a>
+
+<a href="https://www.youtube.com/@dineshsinghdhami1?sub_confirmation=1" target="_blank">
+<i class="fab fa-youtube"></i>
+</a>
+
+</div>
+
+</div>
 </body>
 </html>

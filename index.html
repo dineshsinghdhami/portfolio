@@ -2,13 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     <title>Dinesh Singh Dhami | Portfolio</title>
-    <!-- Font Awesome 6 (free) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="icon" href="favicon-dineshsinghdhami.png" type="image/png">
     <style>
-        /* ----- base reset & personal flavour ----- */
         * {
             margin: 0;
             padding: 0;
@@ -16,14 +14,13 @@
         }
 
         body {
-            background: #f2efe9;  /* warm off-white, handmade feel */
+            background: #f2efe9;
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
             line-height: 1.6;
             color: #1e1e2a;
             padding: 2rem 1rem;
         }
 
-        /* container — looks like a personal notebook */
         .page {
             max-width: 1100px;
             margin: 0 auto;
@@ -34,7 +31,6 @@
             border: 1px solid #e9ddd0;
         }
 
-        /* header — my signature style */
         .top-bar {
             background: #2b2b3a;
             color: #f0ede6;
@@ -100,20 +96,12 @@
             width: 1.2rem;
         }
 
-        /* main grid: about + sidebar */
         .main-grid {
             display: grid;
             grid-template-columns: 1fr 280px;
             gap: 0;
         }
 
-        @media (max-width: 750px) {
-            .main-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        /* left column — my story, education, certificates */
         .content {
             padding: 2rem 2rem 1.8rem;
         }
@@ -171,7 +159,6 @@
             font-weight: 500;
         }
         .edu-item .college {
-            
             color: #f0e2d0;
             padding: 0.2rem 1rem;
             border-radius: 40px;
@@ -188,7 +175,6 @@
             color: #b58b6b;
         }
 
-        /* ----- CERTIFICATE section (handmade cards) ----- */
         .cert-grid {
             display: flex;
             flex-direction: column;
@@ -196,23 +182,20 @@
             margin: 1.2rem 0 0.5rem;
         }
 
-       .cert-card{
-    background:#fefefe;
-    border-left:6px solid #b58b6b;
-    border-radius:16px;
-    padding:0.9rem 1.5rem;
-    box-shadow:0 2px 8px #e4d8cd;
-
-    display:grid;
-    grid-template-columns: 40% 35% 24%; /* perfectly aligned columns */
-    align-items:center;
-    gap:10px;
-
-    border-top:1px solid #f0e0d0;
-    border-right:1px solid #f0e0d0;
-    border-bottom:1px solid #f0e0d0;
-}
-
+        .cert-card {
+            background:#fefefe;
+            border-left:6px solid #b58b6b;
+            border-radius:16px;
+            padding:0.9rem 1.5rem;
+            box-shadow:0 2px 8px #e4d8cd;
+            display:grid;
+            grid-template-columns: 40% 35% 24%;
+            align-items:center;
+            gap:10px;
+            border-top:1px solid #f0e0d0;
+            border-right:1px solid #f0e0d0;
+            border-bottom:1px solid #f0e0d0;
+        }
 
         .cert-card:hover {
             border-left-width: 10px;
@@ -233,15 +216,15 @@
             width: 2rem;
         }
 
-        .cert-issuer{
-    color:#5d4a38;
-    font-size:0.9rem;
-    display:flex;
-    align-items:center;
-    gap:12px;
-    justify-self:end;
-    white-space: nowrap;   /* prevents line break */
-}
+        .cert-issuer {
+            color:#5d4a38;
+            font-size:0.9rem;
+            display:flex;
+            align-items:center;
+            gap:12px;
+            justify-self:end;
+            white-space: nowrap;
+        }
 
         .cert-issuer i {
             color: #977b5e;
@@ -258,7 +241,6 @@
             letter-spacing: 0.3px;
         }
 
-        /* right sidebar — personal & skills */
         .sidebar {
             background: #f4efe7;
             border-left: 1px solid #ddcfc0;
@@ -266,42 +248,37 @@
         }
 
         .profile-pic-placeholder {
-    width: 120px;
-    height: 120px;
-    background: #cdb7a0;
-    border-radius: 50%;
-    margin: 0 auto 1.2rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 4px solid #fff;
-    box-shadow: 0 8px 12px rgba(0,0,0,0.1);
-}
-
-.profile-pic-placeholder img {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    object-fit: cover;
-}
-        
-
-        .profile-pic-placeholder i {
-            filter: drop-shadow(2px 4px 4px rgba(0,0,0,0.1));
+            width: 120px;
+            height: 120px;
+            background: #cdb7a0;
+            border-radius: 50%;
+            margin: 0 auto 1.2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 4px solid #fff;
+            box-shadow: 0 8px 12px rgba(0,0,0,0.1);
         }
 
-        .my-name-side{
-text-align:center;
-font-size:1.3rem;
-font-weight:550;
-margin-top:10px;
-}
+        .profile-pic-placeholder img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+        }
 
-.my-name-side small{
-font-size:0.9rem;
-color:#7b6b5a;
-display:block;
-}
+        .my-name-side {
+            text-align:center;
+            font-size:1.3rem;
+            font-weight:550;
+            margin-top:10px;
+        }
+
+        .my-name-side small {
+            font-size:0.9rem;
+            color:#7b6b5a;
+            display:block;
+        }
 
         .divider {
             height: 2px;
@@ -320,65 +297,68 @@ display:block;
             gap: 12px;
             font-weight: 450;
         }
-        .social-bar{
-    display:flex;
-    justify-content:center;
-    gap:12px;
-    margin-top:12px;
-}
 
-.social-bar a{
-    width:34px;
-    height:34px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    background:#dad1c2;
-    border-radius:50%;
-    color:#4f3f31;
-    font-size:1rem;
-    text-decoration:none;
-    transition:all 0.2s ease;
-}
+        .social-bar {
+            display:flex;
+            justify-content:center;
+            gap:12px;
+            margin-top:12px;
+        }
 
-.social-bar a:hover{
-    background:#b58b6b;
-    color:#fff;
-    transform:translateY(-2px);
-}
-.cert-modal{
-    display:none;
-    position:fixed;
-    z-index:999;
-    left:0;
-    top:0;
-    width:100%;
-    height:100%;
-    background:rgba(0,0,0,0.8);
-    justify-content:center;
-    align-items:center;
-}
+        .social-bar a {
+            width:34px;
+            height:34px;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            background:#dad1c2;
+            border-radius:50%;
+            color:#4f3f31;
+            font-size:1rem;
+            text-decoration:none;
+            transition:all 0.2s ease;
+        }
 
-.cert-modal img{
-    max-width:90%;
-    max-height:85%;
-    border-radius:10px;
-    box-shadow:0 10px 40px rgba(0,0,0,0.5);
-}
+        .social-bar a:hover {
+            background:#b58b6b;
+            color:#fff;
+            transform:translateY(-2px);
+        }
 
-.close-btn{
-    position:absolute;
-    top:20px;
-    right:35px;
-    font-size:40px;
-    color:#fff;
-    cursor:pointer;
-    font-weight:bold;
-}
+        .cert-modal {
+            display:none;
+            position:fixed;
+            z-index:999;
+            left:0;
+            top:0;
+            width:100%;
+            height:100%;
+            background:rgba(0,0,0,0.8);
+            justify-content:center;
+            align-items:center;
+        }
 
-.close-btn:hover{
-    color:#ccc;
-}
+        .cert-modal img {
+            max-width:90%;
+            max-height:85%;
+            border-radius:10px;
+            box-shadow:0 10px 40px rgba(0,0,0,0.5);
+        }
+
+        .close-btn {
+            position:absolute;
+            top:20px;
+            right:35px;
+            font-size:40px;
+            color:#fff;
+            cursor:pointer;
+            font-weight:bold;
+        }
+
+        .close-btn:hover {
+            color:#ccc;
+        }
+
         .skill-list i {
             color: #a47954;
             width: 1.5rem;
@@ -397,7 +377,7 @@ display:block;
             height: 8px;
             border-radius: 12px;
             background: #4f4238;
-            width: 80%; /* dummy */
+            width: 80%;
         }
 
         .personal-note {
@@ -415,7 +395,10 @@ display:block;
             margin-right: 5px;
         }
 
-        /* footer */
+        .mobile-projects {
+            display: none;
+        }
+
         .footer-note {
             background: #e7dfd3;
             padding: 1rem 2rem;
@@ -437,33 +420,174 @@ display:block;
             color: #a56640;
         }
 
-        /* simple js interactive touch */
         .handwritten-hover {
             transition: transform 0.15s;
         }
         .handwritten-hover:hover {
             transform: rotate(0.5deg) scale(1.01);
         }
-        .cert-grid a{
-    text-decoration:none;
-    color:inherit;
-    display:block;
-}
 
-.cert-id{
-    color: #f0e2d0;
+        .cert-grid a {
+            text-decoration:none;
+            color:inherit;
+            display:block;
+        }
+
+        .cert-id {
+            color: #f0e2d0;
             padding: 0.2rem 1rem;
             border-radius: 40px;
             font-size: 0.85rem;
             font-weight: 500;
-}
+        }
 
+        @media (max-width: 750px) {
+            
+            /* Hide skills section on mobile */
+            .sidebar h3,
+            .skill-list,
+            .skill-bar-bg,
+            .divider {
+                display: none;
+            }
+            .sidebar .personal-note {
+                display: none;
+            }
 
+            
+            .mobile-projects {
+                display: block;
+                margin: 1rem 1rem 0 1rem;
+            }
+
+             
+            .main-grid {
+                display:flex;
+                flex-direction:column;
+            }
+
+            .sidebar {
+                order:1;
+            }
+
+            .content {
+                order:2;
+            }
+ 
+            .profile-pic-placeholder { order:1; }
+            .my-name-side { order:2; }
+            .sidebar a[href$="Resume.pdf"] { order:3; }
+            .social-bar { order:4; }
+ 
+            .intro-text { order:1; }
+            .section-title:nth-of-type(1) { order:2; }
+            .edu-item { order:3; }
+            .section-title:nth-of-type(2) { order:4; }
+            .cert-grid { order:5; }
+            
+           
+            .main-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            
+            .top-bar {
+                flex-direction: column;
+                text-align: center;
+                padding: 1rem;
+            }
+            
+            .contact-badge {
+                width: 100%;
+                justify-content: center;
+                padding: 0.6rem;
+                gap: 1rem;
+            }
+            
+            .contact-badge a {
+                font-size: 0.9rem;
+                white-space: normal;
+            }
+            
+            .content {
+                padding: 1.5rem 1rem;
+            }
+            
+            .intro-text {
+                padding: 1.2rem;
+                font-size: 1rem;
+            }
+            
+            .edu-item {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.8rem;
+                padding: 1rem;
+            }
+            
+            .edu-item .desc {
+                width: 100%;
+            }
+            
+            .cert-card {
+                grid-template-columns: 1fr !important;
+                gap: 8px;
+                padding: 1rem;
+            }
+            
+            .cert-issuer {
+                justify-self: start;
+                white-space: normal;
+                flex-wrap: wrap;
+            }
+            
+            .cert-title {
+                flex-wrap: wrap;
+            }
+            
+            .cert-id {
+                width: fit-content;
+                word-break: break-word;
+                max-width: 100%;
+            }
+            
+            .sidebar {
+                border-left: none;
+                border-top: 1px solid #ddcfc0;
+                padding: 1.5rem 1rem;
+            }
+            
+            .skill-bar-bg {
+                margin: 4px 0 0 0;
+                width: 100%;
+            }
+            
+            .footer-note {
+                flex-direction: column;
+                gap: 0.5rem;
+                padding: 1rem;
+                text-align: center;
+            }
+            
+            @media (max-width: 400px) {
+                .profile-pic-placeholder {
+                    width: 100px;
+                    height: 100px;
+                }
+                
+                .identity h1 {
+                    font-size: 1.6rem;
+                }
+                
+                .section-title {
+                    font-size: 1.2rem;
+                }
+            }
+        }
     </style>
 </head>
 <body>
-<!-- <div class="page"> -->
-    <!-- header — unmistakably Dinesh Singh Dhami -->
+
     <div class="top-bar">
         <div class="identity">
             <h1>Dinesh Singh <span>Dhami</span></h1>
@@ -474,37 +598,35 @@ display:block;
         </div>
         <div class="contact-badge">
             <a href="#" onclick="openDirectEmail()" class="contact-email">
-    <i class="fas fa-envelope"></i> dineshdhamidn@gmail.com
-</a>
+                <i class="fas fa-envelope"></i> dineshdhamidn@gmail.com
+            </a>
             <a href="#" onclick="openWhatsApp()" class="contact-phone">
-    <i class="fas fa-phone-alt"></i> 9866109958
-</a>
+                <i class="fas fa-phone-alt"></i> 9866109958
+            </a>
         </div>
     </div>
 
-    <!-- main two-column layout -->
+     
     <div class="main-grid">
-        <!-- LEFT: content (my story, certificates) -->
+        <!-- LEFT: content -->
         <div class="content">
-            <!-- intro / about me (personal) -->
             <div class="intro-text">
-    <p>
-        <strong>Namaste,</strong> I’m <strong>Dinesh Singh Dhami</strong>, a final-year 
-        <strong>Computer Engineering (BE)</strong> student at the 
-        <strong>National Academy of Science and Technology (NAST)</strong>. 
-        Originally from <strong>Darchula</strong> and currently based in 
-        <strong>Dhangadhi, Nepal.</strong> I'm currently learning programming, exploring new technologies, 
-        and building small projects to improve my skills and understanding 
-        of software and system development.
-    </p>
+                <p>
+                    <strong>Namaste,</strong> I'm <strong>Dinesh Singh Dhami</strong>, a final-year 
+                    <strong>Computer Engineering (BE)</strong> student at the 
+                    <strong>National Academy of Science and Technology (NAST)</strong>. 
+                    Originally from <strong>Darchula</strong> and currently based in 
+                    <strong>Dhangadhi, Nepal.</strong> I'm currently learning programming, exploring new technologies, 
+                    and building small projects to improve my skills and understanding 
+                    of software and system development.
+                </p>
+                <p>
+                    This portfolio presents my <strong>skills, projects, and academic journey</strong> 
+                    as I continue learning and developing my knowledge in the field of technology.
+                </p>
+            </div>
 
-    <p>
-        This portfolio presents my <strong>skills, projects, and academic journey</strong> 
-        as I continue learning and developing my knowledge in the field of technology.
-    </p>
-</div>
-
-            <!-- education  (8th semester) -->
+            <!-- Education -->
             <div class="section-title">
                 <i class="fas fa-graduation-cap"></i> Education
             </div>
@@ -512,357 +634,293 @@ display:block;
                 <span class="desc"><i class="fas fa-university"></i> B.E. Computer Engineering</span>
                 <span class="college">National Academy of Science & Technology (NAST)</span>
                 <span class="year">8th semester (2026)</span>
-                
             </div>
             <div class="edu-item" style="margin-top: -5px;">
                 <span class="desc"><i class="fas fa-school"></i> Higher secondary (+2) , Dhangadhi</span>
                 <span class="college">Aishwarya Vidya Niketan (AVN)</span>
                 <span class="year">2077 B.S.</span>
             </div>
-           
 
-            <!-- CERTIFICATE section — exactly as requested, personal style -->
+            <!-- Certificates -->
             <div class="section-title">
-    <i class="fas fa-certificate"></i> Certificates & achievements
-</div>
+                <i class="fas fa-certificate"></i> Certificates & achievements
+            </div>
 
-<div class="cert-grid">
+            <div class="cert-grid">
+                <!-- 1 Web Design -->
+                <a href="certificates/Web-Design-Dinesh-Singh-Dhami.png" class="cert-link">
+                    <div class="cert-card">
+                        <div class="cert-title">
+                            <i class="fas fa-paint-brush"></i>
+                            <span>Web Design Certificate</span>
+                        </div>
+                        <div class="cert-id">Certificate No: CION-18658</div>
+                        <div class="cert-issuer">
+                            <i class="fas fa-laptop-code"></i>
+                            <span>CODE IT</span>
+                            <span class="cert-badge">2025</span>
+                        </div>
+                    </div>
+                </a>
 
-<!-- 1 Web Design (2025) -->
-<a href="certificates/Web-Design-Dinesh-Singh-Dhami.png" class="cert-link">
-<div class="cert-card">
-<div class="cert-title">
-<i class="fas fa-paint-brush"></i>
-<span>Web Design Certificate</span>
-</div>
-<div class="cert-id">Certificate No: CION-18658</div>
-<div class="cert-issuer">
-<i class="fas fa-laptop-code"></i>
-<span>CODE IT</span>
-<span class="cert-badge">2025</span>
-</div>
-</div>
-</a>
+                <!-- 2 Git & GitHub -->
+                <a href="certificates/git-github-certificate.jpg" class="cert-link">
+                    <div class="cert-card">
+                        <div class="cert-title">
+                            <i class="fab fa-github"></i>
+                            <span>Git & GitHub Course</span>
+                        </div>
+                        <div class="cert-id">ID: bc746966-b367-532d-a30a-b1e8a7336963</div>
+                        <div class="cert-issuer">
+                            <i class="fas fa-code-branch"></i>
+                            <span>Technology Channel</span>
+                            <span class="cert-badge">2026</span>
+                        </div>
+                    </div>
+                </a>
 
-<!-- 2 Git & GitHub -->
-<a href="certificates/git-github-certificate.jpg" class="cert-link">
-<div class="cert-card">
-<div class="cert-title">
-<i class="fab fa-github"></i>
-<span>Git & GitHub Course</span>
-</div>
-<div class="cert-id">ID: bc746966-b367-532d-a30a-b1e8a7336963</div>
-<div class="cert-issuer">
-<i class="fas fa-code-branch"></i>
-<span>Technology Channel</span>
-<span class="cert-badge">2026</span>
-</div>
-</div>
-</a>
+                <!-- 3 CodeAlpha Internship -->
+                <a href="certificates/Dinesh-Singh-Dhami-CodeAlpha-Internship-Python.png" class="cert-link">
+                    <div class="cert-card">
+                        <div class="cert-title">
+                            <i class="fab fa-python"></i>
+                            <span>Python Programming Internship</span>
+                        </div>
+                        <div class="cert-id">Student ID: CA/DF1/11173</div>
+                        <div class="cert-issuer">
+                            <i class="fas fa-code"></i>
+                            <span>CodeAlpha</span>
+                            <span class="cert-badge">2026</span>
+                        </div>
+                    </div>
+                </a>
 
-<!-- 3 CodeAlpha Internship -->
-<a href="certificates/Dinesh-Singh-Dhami-CodeAlpha-Internship-Python.png" class="cert-link">
-<div class="cert-card">
-<div class="cert-title">
-<i class="fab fa-python"></i>
-<span>Python Programming Internship</span>
-</div>
-<div class="cert-id">Student ID: CA/DF1/11173</div>
-<div class="cert-issuer">
-<i class="fas fa-code"></i>
-<span>CodeAlpha</span>
-<span class="cert-badge">2026</span>
-</div>
-</div>
-</a>
+                <!-- 4 Computer Network Security -->
+                <a href="certificates/Computer-Network-&-Security-Certificate.jpg" class="cert-link">
+                    <div class="cert-card">
+                        <div class="cert-title">
+                            <i class="fas fa-network-wired"></i>
+                            <span>Computer Network and Security</span>
+                        </div>
+                        <div class="cert-id">Pokhara University Affiliated</div>
+                        <div class="cert-issuer">
+                            <i class="fas fa-university"></i>
+                            <span>NAST</span>
+                            <span class="cert-badge">2026</span>
+                        </div>
+                    </div>
+                </a>
 
-<!-- 4 Computer Network Security -->
-<a href="certificates/Computer-Network-&-Security-Certificate.jpg" class="cert-link">
-<div class="cert-card">
-<div class="cert-title">
-<i class="fas fa-network-wired"></i>
-<span>Computer Network and Security</span>
-</div>
-<div class="cert-id">Pokhara University Affiliated</div>
-<div class="cert-issuer">
-<i class="fas fa-university"></i>
-<span>NAST</span>
-<span class="cert-badge">2026</span>
-</div>
-</div>
-</a>
+                <!-- 5 Cisco Cybersecurity -->
+                <a href="certificates/Dinesh-Singh-Dhami-cisco-networking.png" class="cert-link">
+                    <div class="cert-card">
+                        <div class="cert-title">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Introduction to Cybersecurity</span>
+                        </div>
+                        <div class="cert-id">QR Verified Certificate</div>
+                        <div class="cert-issuer">
+                            <i class="fas fa-network-wired"></i>
+                            <span>Cisco Networking Academy</span>
+                            <span class="cert-badge">2026</span>
+                        </div>
+                    </div>
+                </a>
 
-<!-- 5 Cisco Cybersecurity -->
-<a href="certificates/Dinesh-Singh-Dhami-cisco-networking.png" class="cert-link">
-<div class="cert-card">
-<div class="cert-title">
-<i class="fas fa-shield-alt"></i>
-<span>Introduction to Cybersecurity</span>
-</div>
-<div class="cert-id">QR Verified Certificate</div>
-<div class="cert-issuer">
-<i class="fas fa-network-wired"></i>
-<span>Cisco Networking Academy</span>
-<span class="cert-badge">2026</span>
-</div>
-</div>
-</a>
+                <!-- 6 Microsoft Generative AI -->
+                <a href="certificates/generative-ai-microsoft.png" class="cert-link">
+                    <div class="cert-card">
+                        <div class="cert-title">
+                            <i class="fas fa-brain"></i>
+                            <span>Introduction to Generative AI & Agents</span>
+                        </div>
+                        <div class="cert-id">Verified via Microsoft Learn</div>
+                        <div class="cert-issuer">
+                            <i class="fab fa-microsoft"></i>
+                            <span>Microsoft Learning</span>
+                            <span class="cert-badge">2026</span>
+                        </div>
+                    </div>
+                </a>
 
-<!-- 6 Microsoft Generative AI -->
-<a href="certificates/generative-ai-microsoft.png" class="cert-link">
-<div class="cert-card">
-<div class="cert-title">
-<i class="fas fa-brain"></i>
-<span>Introduction to Generative AI & Agents</span>
-</div>
-<div class="cert-id">Verified via Microsoft Learn</div>
-<div class="cert-issuer">
-<i class="fab fa-microsoft"></i>
-<span>Microsoft Learning</span>
-<span class="cert-badge">2026</span>
-</div>
-</div>
-</a>
+                <!-- 7 Python Data Science -->
+                <a href="certificates/python-in-datascience.png" class="cert-link">
+                    <div class="cert-card">
+                        <div class="cert-title">
+                            <i class="fab fa-python"></i>
+                            <span>Python for Data Science</span>
+                        </div>
+                        <div class="cert-id">Certificate ID: 0171270852DS</div>
+                        <div class="cert-issuer">
+                            <i class="fas fa-university"></i>
+                            <span>Saylor Academy</span>
+                            <span class="cert-badge">2026</span>
+                        </div>
+                    </div>
+                </a>
 
-<!-- 7 Python Data Science -->
-<a href="certificates/python-in-datascience.png" class="cert-link">
-<div class="cert-card">
-<div class="cert-title">
-<i class="fab fa-python"></i>
-<span>Python for Data Science</span>
-</div>
-<div class="cert-id">Certificate ID: 0171270852DS</div>
-<div class="cert-issuer">
-<i class="fas fa-university"></i>
-<span>Saylor Academy</span>
-<span class="cert-badge">2026</span>
-</div>
-</div>
-</a>
+                <!-- 8 Data Preparation -->
+                <a href="certificates/data-preparation-in-data-science.jpg" class="cert-link">
+                    <div class="cert-card">
+                        <div class="cert-title">
+                            <i class="fas fa-database"></i>
+                            <span>Data Preparation in Data Science</span>
+                        </div>
+                        <div class="cert-id">Certificate No: lab1235a</div>
+                        <div class="cert-issuer">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>MindLuster</span>
+                            <span class="cert-badge">2026</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
 
-<!-- 8 Data Preparation -->
-<a href="certificates/data-preparation-in-data-science.jpg" class="cert-link">
-<div class="cert-card">
-<div class="cert-title">
-<i class="fas fa-database"></i>
-<span>Data Preparation in Data Science</span>
-</div>
-<div class="cert-id">Certificate No: lab1235a</div>
-<div class="cert-issuer">
-<i class="fas fa-graduation-cap"></i>
-<span>MindLuster</span>
-<span class="cert-badge">2026</span>
-</div>
-</div>
-</a>
-
-</div>
-
-            
-            <!-- another small personal section: current reading? -->
-<div style="margin:1rem 0;background:#f4ede3;padding:1rem;border-radius:28px;border:1px solid #dacbbc;">
-<i class="fas fa-compass" style="color:#a77b55;"></i>
-<strong>Currently Exploring</strong><br>
-Backend development with Django and Laravel, improving JavaScript skills,
-and learning how scalable web applications are built.
-</div>
-
+            <!-- Currently Exploring section -->
+            <div style="margin:1rem 0;background:#f4ede3;padding:1rem;border-radius:28px;border:1px solid #dacbbc;">
+                <i class="fas fa-compass" style="color:#a77b55;"></i>
+                <strong>Currently Exploring</strong><br>
+                Backend development with Django and Laravel, improving JavaScript skills,
+                and learning how scalable web applications are built.
+            </div>
         </div>
 
-        <!-- RIGHT sidebar: skills, extra personal -->
+        <!-- RIGHT sidebar -->
         <div class="sidebar">
             <div class="profile-pic-placeholder">
-    <img src="dineshsinghdhami.jpg" alt="Profile Picture">
-</div>
-           <div class="my-name-side">
-    Dinesh Singh Dhami
-    <small>Coding Newbie</small>
-</div>
+                <img src="dineshsinghdhami.jpg" alt="Profile Picture">
+            </div>
+            <div class="my-name-side">
+                Dinesh Singh Dhami
+                <small>Coding Newbie</small>
+            </div>
             <div style="text-align:center; margin-top:12px;">
-    <a href="Dinesh-Singh-Dhami-Resume.pdf" 
-       style="
-       display:inline-block;
-       background:#2b2b3a;
-       color:#fff;
-       padding:0.55rem 1.3rem;
-       border-radius:40px;
-       font-size:0.9rem;
-       text-decoration:none;
-       font-weight:500;
-       transition:all 0.2s ease;
-       box-shadow:0 3px 6px rgba(0,0,0,0.12);
-       ">
-       <i class="fas fa-file-alt"></i> View CV
-    </a>
-</div>
+                <a href="Dinesh-Singh-Dhami-Resume.pdf" 
+                   style="display:inline-block; background:#2b2b3a; color:#fff; padding:0.55rem 1.3rem; border-radius:40px; font-size:0.9rem; text-decoration:none; font-weight:500; transition:all 0.2s ease; box-shadow:0 3px 6px rgba(0,0,0,0.12);">
+                    <i class="fas fa-file-alt"></i> View CV
+                </a>
+            </div>
             <div class="divider"></div>
 
-            <!-- skills (personal touch – i'm still learning) -->
+            <!-- Skills -->
             <h3 style="font-weight: 550; margin-bottom: 0.5rem;">
-<i class="fas fa-code" style="color:#b58b6b;"></i> skills i'm working on
-</h3>
+                <i class="fas fa-code" style="color:#b58b6b;"></i> skills i'm working on
+            </h3>
 
-<ul class="skill-list">
+            <ul class="skill-list">
+                <li><i class="fab fa-python"></i> Python / Django</li>
+                <div class="skill-bar-bg"><div class="skill-bar-fill" style="width:50%"></div></div>
+                <li><i class="fab fa-python"></i> Python / Flask</li>
+                <div class="skill-bar-bg"><div class="skill-bar-fill" style="width:50%"></div></div>
+                <li><i class="fab fa-php"></i> PHP / Laravel</li>
+                <div class="skill-bar-bg"><div class="skill-bar-fill" style="width:50%"></div></div>
+                <li><i class="fab fa-js"></i> JavaScript</li>
+                <div class="skill-bar-bg"><div class="skill-bar-fill" style="width:50%"></div></div>
+                <li><i class="fas fa-chart-line"></i> Data Science</li>
+                <div class="skill-bar-bg"><div class="skill-bar-fill" style="width:50%"></div></div>
+                <li><i class="fab fa-react"></i> MERN Stack</li>
+                <div class="skill-bar-bg"><div class="skill-bar-fill" style="width:50%"></div></div>
+                <li><i class="fab fa-html5"></i> HTML / CSS</li>
+                <div class="skill-bar-bg"><div class="skill-bar-fill" style="width:50%"></div></div>
+                <li><i class="fab fa-git-alt"></i> Git / GitHub</li>
+                <div class="skill-bar-bg"><div class="skill-bar-fill" style="width:50%"></div></div>
+                <li><i class="fab fa-bootstrap"></i> Bootstrap</li>
+                <div class="skill-bar-bg"><div class="skill-bar-fill" style="width:50%"></div></div>
+                <li><i class="fas fa-plug"></i> REST API</li>
+                <div class="skill-bar-bg"><div class="skill-bar-fill" style="width:50%"></div></div>
+            </ul>
 
-    <li><i class="fab fa-python"></i> Python / Django</li>
-<div class="skill-bar-bg"><div class="skill-bar-fill" style="width:50%"></div></div>
+            <div class="personal-note project-section">
+                <i class="fas fa-folder-open"></i> 
+                <strong>View My Projects</strong>
+                <p style="margin-top:6px;">
+                    Explore my projects I have built during my computer engineering journey.
+                </p>
+                <div style="text-align:center; margin-top:10px;">
+                    <a href="projects.html"
+                       style="display:inline-block; background:#2b2b3a; color:#fff; padding:0.5rem 1.3rem; border-radius:40px; font-size:0.9rem; text-decoration:none; font-weight:500; transition:0.2s;"
+                       onmouseover="this.style.background='#b58b6b'"
+                       onmouseout="this.style.background='#2b2b3a'">
+                        <i class="fas fa-arrow-right"></i> View Projects
+                    </a>
+                </div>
+            </div>
 
-<li><i class="fab fa-python"></i> Python / Flask</li>
-<div class="skill-bar-bg"><div class="skill-bar-fill" style="width:50%"></div></div>
-
-<li><i class="fab fa-php"></i> PHP / Laravel</li>
-<div class="skill-bar-bg"><div class="skill-bar-fill" style="width:50%"></div></div>
-
-<li><i class="fab fa-js"></i> JavaScript</li>
-<div class="skill-bar-bg"><div class="skill-bar-fill" style="width:50%"></div></div>
-
-<li><i class="fas fa-chart-line"></i> Data Science</li>
-<div class="skill-bar-bg"><div class="skill-bar-fill" style="width:50%"></div></div>
-
-<li><i class="fab fa-react"></i> MERN Stack</li>
-<div class="skill-bar-bg"><div class="skill-bar-fill" style="width:50%"></div></div>
-
-<li><i class="fab fa-html5"></i> HTML / CSS</li>
-<div class="skill-bar-bg"><div class="skill-bar-fill" style="width:50%"></div></div>
-
-<li><i class="fab fa-git-alt"></i> Git / GitHub</li>
-<div class="skill-bar-bg"><div class="skill-bar-fill" style="width:50%"></div></div>
-
-<li><i class="fab fa-bootstrap"></i> Bootstrap</li>
-<div class="skill-bar-bg"><div class="skill-bar-fill" style="width:50%"></div></div>
-
-<li><i class="fas fa-plug"></i> REST API</li>
-<div class="skill-bar-bg"><div class="skill-bar-fill" style="width:50%"></div></div>
-
-</ul>
-
-            <div class="personal-note">
-
-    <i class="fas fa-folder-open"></i> 
-    <strong>View My Projects</strong>
-
-    <p style="margin-top:6px;">
-        Explore my projects I have built during my computer engineering journey.
-    </p>
-
-    <div style="text-align:center; margin-top:10px;">
-        <a href="projects.html"
-        style="
-        display:inline-block;
-        background:#2b2b3a;
-        color:#fff;
-        padding:0.5rem 1.3rem;
-        border-radius:40px;
-        font-size:0.9rem;
-        text-decoration:none;
-        font-weight:500;
-        transition:0.2s;
-        "
-        onmouseover="this.style.background='#b58b6b'"
-        onmouseout="this.style.background='#2b2b3a'"
-        >
-        <i class="fas fa-arrow-right"></i> View Projects
-        </a>
-    </div>
-
-</div>
-
-            <!-- contact mini (repeated for convenience) -->
-        <div class="social-bar">
-
-    <a href="https://github.com/dineshsinghdhami" target="_blank">
-        <i class="fab fa-github"></i>
-    </a>
-
-    <a href="https://linkedin.com/in/dineshsinghdhami1" target="_blank">
-        <i class="fab fa-linkedin"></i>
-    </a>
-
-    <a href="https://x.com/dineshdhami001" target="_blank">
-        <i class="fab fa-twitter"></i>
-    </a>
-
-   <a href="https://www.youtube.com/@dineshsinghdhami1?sub_confirmation=1" target="_blank">
-<i class="fab fa-youtube"></i>
-</a>
-
-</div>
-            <!-- <div style="margin-top: 1rem; display: flex; justify-content: center; gap: 1.2rem; color: #4f3f31;">
-                <i class="fab fa-github"></i> <i class="fab fa-linkedin"></i> <i class="fab fa-x-twitter"></i> <i class="fab fa-instagram"></i>
-                <span style="font-size:0.8rem;">(dinesh_dhami)</span>
-            </div> -->
+            <div class="social-bar social-section">
+                <a href="https://github.com/dineshsinghdhami" target="_blank">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://linkedin.com/in/dineshsinghdhami1" target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://x.com/dineshdhami001" target="_blank">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://www.youtube.com/@dineshsinghdhami1?sub_confirmation=1" target="_blank">
+                    <i class="fab fa-youtube"></i>
+                </a>
+            </div>
         </div>
     </div>
 
-    <!-- footer — it's me -->
+    <div class="mobile-projects">
+        <div class="personal-note project-section">
+            <i class="fas fa-folder-open"></i> 
+            <strong>View My Projects</strong>
+            <p style="margin-top:6px;">
+                Explore my projects I have built during my computer engineering journey.
+            </p>
+            <div style="text-align:center; margin-top:10px;">
+                <a href="projects.html"
+                   style="display:inline-block; background:#2b2b3a; color:#fff; padding:0.5rem 1.3rem; border-radius:40px; font-size:0.9rem; text-decoration:none; font-weight:500; transition:0.2s;"
+                   onmouseover="this.style.background='#b58b6b'"
+                   onmouseout="this.style.background='#2b2b3a'">
+                    <i class="fas fa-arrow-right"></i> View Projects
+                </a>
+            </div>
+        </div>
+    </div>
+
     <div class="footer-note">
         <span class="madeby"><i class="fas fa-pencil-alt"></i> Designed & Coded — © Dinesh Singh Dhami, 2026</span>
         <span><i class="fas fa-location-dot"></i> Dhangadhi, Sudurpashchim</span>
     </div>
 </div>
 
-<!-- small JS to make it a bit more "me" – interactive but simple -->
 <script>
-    // certificate popup
-document.addEventListener("DOMContentLoaded", function(){
+    document.addEventListener("DOMContentLoaded", function(){
+        const modal = document.getElementById("certModal");
+        const modalImg = document.getElementById("modalImage");
+        const closeBtn = document.querySelector(".close-btn");
 
-const modal = document.getElementById("certModal");
-const modalImg = document.getElementById("modalImage");
-const closeBtn = document.querySelector(".close-btn");
+        document.querySelectorAll(".cert-link").forEach(link=>{
+            link.addEventListener("click",function(e){
+                e.preventDefault();
+                modal.style.display="flex";
+                modalImg.src=this.getAttribute("href");
+            });
+        });
 
-document.querySelectorAll(".cert-link").forEach(link=>{
-    link.addEventListener("click",function(e){
-        e.preventDefault();
-        modal.style.display="flex";
-        modalImg.src=this.getAttribute("href");
-    });
-});
+        closeBtn.addEventListener("click",function(){
+            modal.style.display="none";
+        });
 
-closeBtn.addEventListener("click",function(){
-    modal.style.display="none";
-});
+        modal.addEventListener("click",function(e){
+            if(e.target===modal){
+                modal.style.display="none";
+            }
+        });
 
-modal.addEventListener("click",function(e){
-    if(e.target===modal){
-        modal.style.display="none";
-    }
-});
-
-});
-    (function(){
-        // just a tiny personal touch: click on any certificate card shows a console message (like i'm logging thoughts)
         const cards = document.querySelectorAll('.cert-card');
-        cards.forEach((card, index) => {
-            card.addEventListener('click', function(e) {
-                // don't interfere if user clicks on link/button (but we have none)
-                const certName = this.querySelector('.cert-name')?.innerText || 'certificate';
-                console.log(`📜 Dinesh's note: showing "${certName}" to a friend.`);
-                // optional: subtle alert? better to use a small tooltip feeling, but keep quiet.
-                // instead we change bg momentarily
+        cards.forEach((card) => {
+            card.addEventListener('click', function() {
                 this.style.backgroundColor = '#f3eadb';
                 setTimeout(() => {
                     this.style.backgroundColor = '';
                 }, 150);
             });
         });
-
-        // extra: on header contact, show a friendly message
-        const emailLink = document.querySelector('a[href^="mailto"]');
-        if(emailLink) {
-            emailLink.addEventListener('click', (e) => {
-                console.log('📧 dineshdhamidn@gmail.com — feel free to write!');
-            });
-        }
-
-        // phone number click simulation (non-link)
-        const phoneSpan = document.querySelector('.contact-badge span:has(.fa-phone-alt)');
-        if(phoneSpan) {
-            phoneSpan.addEventListener('click', () => {
-                alert('📞 9866109958  (i usually reply on WhatsApp)');
-            });
-        }
-
-        // little hover effect for my name
+ 
         const nameH1 = document.querySelector('.identity h1');
         if(nameH1) {
             nameH1.addEventListener('mouseenter', () => {
@@ -873,65 +931,47 @@ modal.addEventListener("click",function(e){
                 nameH1.style.color = '#fff';
             });
         }
-
-    
-    })();
+    });
 
     function isMobileDevice() {
-    return /Mobi|Android|iPhone|iPad/i.test(navigator.userAgent);
-}
-
-function openDirectEmail() {
-
-    const subject = "Contact From Portfolio";
-    const body = "Hi Dinesh, I found your portfolio and would like to connect.";
-
-    const encodedSubject = encodeURIComponent(subject);
-    const encodedBody = encodeURIComponent(body);
-
-    if (isMobileDevice()) {
-
-        // Mobile → open email app
-        window.location.href =
-        `mailto:dineshdhamidn@gmail.com?subject=${encodedSubject}&body=${encodedBody}`;
-
-    } else {
-
-        // Desktop → open Gmail compose
-        const gmailURL =
-        `https://mail.google.com/mail/?view=cm&fs=1&to=dineshdhamidn@gmail.com&su=${encodedSubject}&body=${encodedBody}`;
-
-        window.open(gmailURL, "_blank");
+        return /Mobi|Android|iPhone|iPad/i.test(navigator.userAgent);
     }
-}
-function openWhatsApp() {
 
-    const phoneNumber = "9779866109958"; 
-    const message = "Hi Dinesh, I visited your portfolio and would like to connect.";
+    function openDirectEmail() {
+        const subject = "Contact From Portfolio";
+        const body = "Hi Dinesh, I found your portfolio and would like to connect.";
+        const encodedSubject = encodeURIComponent(subject);
+        const encodedBody = encodeURIComponent(body);
 
-    const encodedMessage = encodeURIComponent(message);
+        if (isMobileDevice()) {
+            window.location.href = `mailto:dineshdhamidn@gmail.com?subject=${encodedSubject}&body=${encodedBody}`;
+        } else {
+            const gmailURL = `https://mail.google.com/mail/?view=cm&fs=1&to=dineshdhamidn@gmail.com&su=${encodedSubject}&body=${encodedBody}`;
+            window.open(gmailURL, "_blank");
+        }
+    }
 
-    const whatsappURL =
-    `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
-
-    window.open(whatsappURL, "_blank");
-
-}
+    function openWhatsApp() {
+        const phoneNumber = "9779866109958"; 
+        const message = "Hi Dinesh, I visited your portfolio and would like to connect.";
+        const encodedMessage = encodeURIComponent(message);
+        const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+        window.open(whatsappURL, "_blank");
+    }
 </script>
 
-<!-- small extra style for dynamic class (no conflict) -->
+ 
 <style>
-    /* ensure no flash */
     .profile-pic-placeholder i { transition: transform 0.2s; }
     .cert-card { cursor: pointer; transition: background 0.2s, border-left 0.1s; }
     .contact-badge span { cursor: pointer; }
 </style>
+
+ 
 <div id="certModal" class="cert-modal">
     <span class="close-btn">&times;</span>
     <img class="modal-img" id="modalImage">
-    
 </div>
-
 
 </body>
 </html>
