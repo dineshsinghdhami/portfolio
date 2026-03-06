@@ -1,0 +1,580 @@
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #f2efe9;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #1e1e2a;
+            padding: 2rem 1rem;
+        }
+
+        .page {
+            max-width: 1100px;
+            margin: 0 auto;
+            background: #fefcf8;
+            border-radius: 32px 32px 24px 24px;
+            box-shadow: 0 20px 35px -10px rgba(0, 0, 0, 0.15), 0 2px 8px rgba(0,0,0,0.05);
+            overflow: hidden;
+            border: 1px solid #e9ddd0;
+        }
+
+        .navbar {
+            background: #2b2b3a;
+            color: #f0ede6;
+            padding: 1rem 2rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 4px solid #b58b6b;
+        }
+
+        .identity h1 {
+            font-weight: 600;
+            font-size: 1.9rem;
+            letter-spacing: -0.5px;
+            color: #fff;
+        }
+
+        .identity h1 span {
+            color: #dbba95;
+            font-weight: 400;
+        }
+
+        .identity .tagline {
+            font-size: 0.9rem;
+            color: #c7bcac;
+            margin-top: 4px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .identity .tagline i {
+            color: #b58b6b;
+        }
+
+        .contact-badge {
+            background: #3e3e52;
+            padding: 0.6rem 1.5rem;
+            border-radius: 60px;
+            display: flex;
+            gap: 1.8rem;
+            flex-wrap: wrap;
+            font-size: 0.95rem;
+            border: 1px solid #5f5f78;
+        }
+
+        .contact-badge a, .contact-badge span {
+            color: #f0e5d8;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            transition: color 0.2s;
+        }
+
+        .contact-badge a:hover {
+            color: #dbba95;
+        }
+
+        .contact-badge i {
+            color: #b58b6b;
+            width: 1.2rem;
+        }
+
+        .main-grid {
+            display: grid;
+            grid-template-columns: 1fr 280px;
+            gap: 0;
+        }
+
+        .content {
+            padding: 2rem 2rem 1.8rem;
+        }
+
+        .section-title {
+            font-size: 1.4rem;
+            font-weight: 550;
+            margin: 1.8rem 0 1rem 0;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            border-bottom: 2px dashed #cdb7a0;
+            padding-bottom: 0.4rem;
+            color: #2b2b3a;
+        }
+
+        .section-title i {
+            color: #b58b6b;
+            font-size: 1.6rem;
+        }
+
+        .intro-text {
+            background: #faf6f0;
+            padding: 1.4rem 1.8rem;
+            border-radius: 40px 20px 40px 20px;
+            font-size: 1.1rem;
+            border: 1px solid #e2d5c8;
+            box-shadow: inset 0 1px 4px #f1e5d8;
+            margin-bottom: 0.5rem;
+        }
+
+        .intro-text strong {
+            color: #5d3f2b;
+            font-weight: 600;
+        }
+
+        .edu-item {
+            background: #ffffff;
+            border-radius: 24px;
+            padding: 1rem 1.5rem;
+            margin: 1rem 0 0.5rem;
+            border: 1px solid #e7dacd;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .edu-item .year {
+            background: #2b2b3a;
+            color: #f0e2d0;
+            padding: 0.2rem 1rem;
+            border-radius: 40px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+        .edu-item .college {
+            color: #f0e2d0;
+            padding: 0.2rem 1rem;
+            border-radius: 40px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        .edu-item .desc {
+            font-weight: 500;
+            color: #2e2e3a;
+        }
+        .edu-item .desc i {
+            margin-right: 8px;
+            color: #b58b6b;
+        }
+
+        .cert-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin: 1.2rem 0 0.5rem;
+        }
+
+        .cert-card {
+            background:#fefefe;
+            border-left:6px solid #b58b6b;
+            border-radius:16px;
+            padding:0.9rem 1.5rem;
+            box-shadow:0 2px 8px #e4d8cd;
+            display:grid;
+            grid-template-columns: 40% 35% 24%;
+            align-items:center;
+            gap:10px;
+            border-top:1px solid #f0e0d0;
+            border-right:1px solid #f0e0d0;
+            border-bottom:1px solid #f0e0d0;
+        }
+
+        .cert-card:hover {
+            border-left-width: 10px;
+            background: #fcf9f5;
+        }
+
+        .cert-name {
+            font-weight: 550;
+            color: #1f1f2b;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .cert-name i {
+            color: #a57c5a;
+            font-size: 1.3rem;
+            width: 2rem;
+        }
+
+        .cert-issuer {
+            color:#5d4a38;
+            font-size:0.9rem;
+            display:flex;
+            align-items:center;
+            gap:12px;
+            justify-self:end;
+            white-space: nowrap;
+        }
+
+        .cert-issuer i {
+            color: #977b5e;
+            width: 1.2rem;
+        }
+
+        .cert-badge {
+            background: #e4d5c4;
+            color: #2b2b3a;
+            font-size: 0.7rem;
+            padding: 0.2rem 0.7rem;
+            border-radius: 30px;
+            font-weight: 600;
+            letter-spacing: 0.3px;
+        }
+
+        .sidebar {
+            background: #f4efe7;
+            border-left: 1px solid #ddcfc0;
+            padding: 2rem 1.8rem;
+        }
+
+        .profile-pic-placeholder {
+            width: 120px;
+            height: 120px;
+            background: #cdb7a0;
+            border-radius: 50%;
+            margin: 0 auto 1.2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 4px solid #fff;
+            box-shadow: 0 8px 12px rgba(0,0,0,0.1);
+        }
+
+        .profile-pic-placeholder img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .my-name-side {
+            text-align:center;
+            font-size:1.3rem;
+            font-weight:550;
+            margin-top:10px;
+        }
+
+        .my-name-side small {
+            font-size:0.9rem;
+            color:#7b6b5a;
+            display:block;
+        }
+
+        .divider {
+            height: 2px;
+            background: linear-gradient(90deg, #dacbb8, transparent);
+            margin: 1.5rem 0;
+        }
+
+        .skill-list {
+            list-style: none;
+        }
+
+        .skill-list li {
+            margin: 0.7rem 0;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 450;
+        }
+
+        .social-bar {
+            display:flex;
+            justify-content:center;
+            gap:12px;
+            margin-top:12px;
+        }
+
+        .social-bar a {
+            width:34px;
+            height:34px;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            background:#dad1c2;
+            border-radius:50%;
+            color:#4f3f31;
+            font-size:1rem;
+            text-decoration:none;
+            transition:all 0.2s ease;
+        }
+
+        .social-bar a:hover {
+            background:#b58b6b;
+            color:#fff;
+            transform:translateY(-2px);
+        }
+
+        .cert-modal {
+            display:none;
+            position:fixed;
+            z-index:999;
+            left:0;
+            top:0;
+            width:100%;
+            height:100%;
+            background:rgba(0,0,0,0.8);
+            justify-content:center;
+            align-items:center;
+        }
+
+        .cert-modal img {
+            max-width:90%;
+            max-height:85%;
+            border-radius:10px;
+            box-shadow:0 10px 40px rgba(0,0,0,0.5);
+        }
+
+        .close-btn {
+            position:absolute;
+            top:20px;
+            right:35px;
+            font-size:40px;
+            color:#fff;
+            cursor:pointer;
+            font-weight:bold;
+        }
+
+        .close-btn:hover {
+            color:#ccc;
+        }
+
+        .skill-list i {
+            color: #a47954;
+            width: 1.5rem;
+            font-size: 1.2rem;
+        }
+
+        .skill-bar-bg {
+            background: #d9caba;
+            height: 8px;
+            border-radius: 12px;
+            margin: 4px 0 0 26px;
+            width: calc(100% - 26px);
+        }
+
+        .skill-bar-fill {
+            height: 8px;
+            border-radius: 12px;
+            background: #4f4238;
+            width: 80%;
+        }
+
+        .personal-note {
+            background: #fffbf5;
+            border-radius: 24px;
+            padding: 1rem 1.2rem;
+            margin: 1.8rem 0;
+            border: 1px solid #e3cfbc;
+            font-size: 0.95rem;
+            color: #2f2f3a;
+        }
+
+        .personal-note i {
+            color: #b58b6b;
+            margin-right: 5px;
+        }
+
+        .mobile-projects {
+            display: none;
+        }
+
+        .footer-note {
+            background: #e7dfd3;
+            padding: 1rem 2rem;
+            font-size: 0.9rem;
+            text-align: center;
+            color: #4a4138;
+            border-top: 1px solid #cdbba8;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-note .madeby {
+            font-style: italic;
+        }
+
+        .footer-note i {
+            color: #a56640;
+        }
+
+        .handwritten-hover {
+            transition: transform 0.15s;
+        }
+        .handwritten-hover:hover {
+            transform: rotate(0.5deg) scale(1.01);
+        }
+
+        .cert-grid a {
+            text-decoration:none;
+            color:inherit;
+            display:block;
+        }
+
+        .cert-id {
+            color: #f0e2d0;
+            padding: 0.2rem 1rem;
+            border-radius: 40px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        @media (max-width: 750px) {
+            
+            /* Hide skills section on mobile */
+            .sidebar h3,
+            .skill-list,
+            .skill-bar-bg,
+            .divider {
+                display: none;
+            }
+            .sidebar .personal-note {
+                display: none;
+            }
+
+            
+            .mobile-projects {
+                display: block;
+                margin: 1rem 1rem 0 1rem;
+            }
+
+             
+            .main-grid {
+                display:flex;
+                flex-direction:column;
+            }
+
+            .sidebar {
+                order:1;
+            }
+
+            .content {
+                order:2;
+            }
+ 
+            .profile-pic-placeholder { order:1; }
+            .my-name-side { order:2; }
+            .sidebar a[href$="Resume.pdf"] { order:3; }
+            .social-bar { order:4; }
+ 
+            .intro-text { order:1; }
+            .section-title:nth-of-type(1) { order:2; }
+            .edu-item { order:3; }
+            .section-title:nth-of-type(2) { order:4; }
+            .cert-grid { order:5; }
+            
+           
+            .main-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            
+            .navbar {
+                flex-direction: column;
+                text-align: center;
+                padding: 1rem;
+            }
+            
+            .contact-badge {
+                width: 100%;
+                justify-content: center;
+                padding: 0.6rem;
+                gap: 1rem;
+            }
+            
+            .contact-badge a {
+                font-size: 0.9rem;
+                white-space: normal;
+            }
+            
+            .content {
+                padding: 1.5rem 1rem;
+            }
+            
+            .intro-text {
+                padding: 1.2rem;
+                font-size: 1rem;
+            }
+            
+            .edu-item {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.8rem;
+                padding: 1rem;
+            }
+            
+            .edu-item .desc {
+                width: 100%;
+            }
+            
+            .cert-card {
+                grid-template-columns: 1fr !important;
+                gap: 8px;
+                padding: 1rem;
+            }
+            
+            .cert-issuer {
+                justify-self: start;
+                white-space: normal;
+                flex-wrap: wrap;
+            }
+            
+            .cert-title {
+                flex-wrap: wrap;
+            }
+            
+            .cert-id {
+                width: fit-content;
+                word-break: break-word;
+                max-width: 100%;
+            }
+            
+            .sidebar {
+                border-left: none;
+                border-top: 1px solid #ddcfc0;
+                padding: 1.5rem 1rem;
+            }
+            
+            .skill-bar-bg {
+                margin: 4px 0 0 0;
+                width: 100%;
+            }
+            
+            .footer-note {
+                flex-direction: column;
+                gap: 0.5rem;
+                padding: 1rem;
+                text-align: center;
+            }
+            
+            @media (max-width: 400px) {
+                .profile-pic-placeholder {
+                    width: 100px;
+                    height: 100px;
+                }
+                
+                .identity h1 {
+                    font-size: 1.6rem;
+                }
+                
+                .section-title {
+                    font-size: 1.2rem;
+                }
+            }
+        }
+        .profile-pic-placeholder i { transition: transform 0.2s; }
+    .cert-card { cursor: pointer; transition: background 0.2s, border-left 0.1s; }
+    .contact-badge span { cursor: pointer; }
